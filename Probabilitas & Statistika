@@ -1,0 +1,55 @@
+print ("Mencari nilai Mean, Modus, Median :")
+print("=====================================")
+
+def mean(list_angka):
+    total = 0
+    for num in list_angka:
+        total = total + num
+    return total/len(list_angka)
+
+def modus(list_angka):
+    max_count =(0, 0)
+    for num in list_angka:
+        occurences = list_angka.count(num)
+        if occurences > max_count[0]:
+            max_count = (occurences, num)
+    return max_count[1]
+
+def median(list_angka):
+    list_angka.sort()
+    if len(list_angka)% 2 != 0:
+        middle_index = int((lent(list_angka) -1)/2)
+        return list_angka[midle_index]
+    elif len(list_angka) % 2 == 0 :
+        midle_index_1 = int(len(list_angka) /2)
+        midle_index_2 = int(len(list_angka) /2)-1
+        return lenprint ("Mencari nilai Mean, Modus, Median :")
+print("=====================================")
+
+def mean(list_angka):
+    total = 0
+    for num in list_angka:
+        total = total + num
+    return total/len(list_angka)
+
+def modus(list_angka):
+    max_count =(0, 0)
+    for num in list_angka:
+        occurences = list_angka.count(num)
+        if occurences > max_count[0]:
+            max_count = (occurences, num)
+    return max_count[1]
+
+def median(list_angka):
+    list_angka.sort()
+    if len(list_angka)% 2 !=0:
+        midle_index = int ((len(list_angka)-1)/2)
+        return list_angka[midle_index]
+    elif len(list_angka) % 2 == 0 :
+        midle_index_1 = int(len(list_angka)/2)
+        midle_index_2 = int(len(list_angka)/2)-1
+        return mean([list_angka[midle-index_1],list_angka[midle_index_2]])
+
+print(mean([0,2,2,0,5,2,9]))
+print(modus([0,2,2,0,5,2,9]))
+print(median([0,2,2,0,5,2,9]))
